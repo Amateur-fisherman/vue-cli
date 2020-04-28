@@ -8,6 +8,7 @@
 <script>
 import index from './components/index/index.vue'
 
+
 export default {
   name: 'App',
   components: {
