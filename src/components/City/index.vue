@@ -10,30 +10,20 @@
                 </div>
             </div>
             
-            {shouzimuList.map((obj, i) => (
-                <div class="zimu-wrap" v-for="(obj, i) in shouzimuList" :key="i">
-                    <div class="zimu-t" id="{{obj}}">{{obj}}</div>
-                    {shouzimuMaps[obj].map((item, j) => (
-                        <div class="zimu-d" v-for="(item, j) in shouzimuMaps" :key="j">
-                            <span @click="chooseCityEvent(item)">{{item.name}}</span>
-                        </div>
-                    ))}
+            <div class="zimu-wrap" v-for="(obj, i) in shouzimuList" :key="i">
+                <div class="zimu-t" id="{{obj}}">{{obj}}</div>
+                <div class="zimu-d" v-for="(item, j) in shouzimuMaps[obj]" :key="j">
+                    <span @click="chooseCityEvent(item)">{{item.name}}</span>
                 </div>
-            ))}
+            </div>
         </div>
         <div class="zimu-nav">
-            <div data-id="hot" onClick={goTop}>#</div>
-            {shouzimuList.map((item, i) => (
-                <div onClick={() => go(item)} key={i}>{item}</div>
-            ))}
+            <div data-id="hot" @click="goTop">#</div>
+            <div v-for="(item,i) in shouzimuList" @click="go(item)" :key="i">{{item}}</div>
         </div>
     </div>
 </template>
 
-
-
-
-import React from 'react';
 import './index.less';
 import {shouzimuList, shouzimuMaps, hotDistrict} from './district'
 
