@@ -1,10 +1,12 @@
 <template>
   <div>
-    128
+    <City></City>
   </div>
 </template>
 
 <script>
+import City from '../City/index';
+
 export default {
   name: 'index',
   props: {
@@ -13,7 +15,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
   margin: 40px 0 0;
