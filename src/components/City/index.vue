@@ -28,7 +28,6 @@ import './index.less';
 import {shouzimuList, shouzimuMaps, hotDistrict} from './district'
 
 
-
 function City(props) {
     let {isShow, callback} = props;
 
